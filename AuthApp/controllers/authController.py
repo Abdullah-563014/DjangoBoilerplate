@@ -42,13 +42,13 @@ def index(request):
 
     # print(db)
     # //dict
-    insertData = {}
-    insertData["created_at"] = insertData["updated_at"] = timestamp()
-    insertData["name"] = "salimH"
-    insertData["email"] = "salim@polyuno.com"
-    insertData["password"] = make_password("abcd")
+    # insertData = {}
+    # insertData["created_at"] = insertData["updated_at"] = timestamp()
+    # insertData["name"] = "salimH"
+    # insertData["email"] = "salim@polyuno.com"
+    # insertData["password"] = make_password("abcd")
 
-    makeId = randomString(32)
+    # makeId = randomString(32)
 
 
     return render(request, 'login.html', context=data)

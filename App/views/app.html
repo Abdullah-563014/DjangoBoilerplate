@@ -12,7 +12,7 @@
         <meta property="og:locale" content="en_US" />
         <meta http-equiv="content-language" content="en" />
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-        <link rel="shortcut icon" href="{% static 'public/images/logo.png' %}" type="image/x-icon" />
+        <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon" />
         <!-- SEO meta data -->
         <meta name="description" content="{{description}}" />
         <meta name="keywords" content="{{keywords}}" />
@@ -79,23 +79,33 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}" />
         <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
 
-    </head>
-
-    <body>
-
-        <!-- main content -->
-        {% block content %}{% endblock %}
-
-
-
-
 
         <!-- custom css -->
         {% block custom_css %}{% endblock %}
 
-        <!-- custom js -->
-        {% block custom_js %}{% endblock %}
+    </head>
 
+    <body x-data="app" x-init="initAll">
+
+        <!-- main content -->
+        {% block content %}{% endblock content %}
+
+
+
+
+
+        <script>
+            const app = {
+                initAll() {
+                    console.log("from app.js file");
+                },
+            }
+        </script>
+
+        <!-- custom js -->
+        {% block custom_js %}{% endblock custom_js %}
+
+        
     </body>
 
 </html>

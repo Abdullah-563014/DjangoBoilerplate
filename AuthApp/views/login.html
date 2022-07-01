@@ -2,8 +2,26 @@
 {% block content %}
 {% load static %}
 
-<div>
-    
+<div x-data="loginPage" x-init="initAll">
+    <h1 x-show="isVisible">login page</h1>
+
+
+
+    <script>
+        const loginPage = {
+            isVisible: false,
+            initAll() {
+                console.log("from login.js file");
+                const thisClass = this;
+                setTimeout(() => {
+                    thisClass.isVisible = true;
+                    console.log("content visible");
+                }, 2000);
+            },
+        }
+    </script>
 </div>
+
+
 
 {% endblock %}
