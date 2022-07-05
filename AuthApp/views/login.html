@@ -3,14 +3,13 @@
 {% load static %}
 
 <div x-data="loginPage" x-init="initAll">
-    <h1 x-show="isVisible">login page</h1>
-    <p class="hello">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur temporibus inventore
-        earum reiciendis
-        aperiam atque odio sed numquam assumenda id est nemo, architecto soluta omnis voluptatum dicta? Quia, iusto.</p>
+    <div class="w-1/2 bg-gray-100">
+        <img class="w-56" src="{% static 'images/logo.png' %}" alt="logo">
+        <button class="btn">Login</button>
+    </div>
+    <div class="w-1/2 bg-lime-400">
 
-    <h3>hello</h3>
-
-
+    </div>
 </div>
 {% endblock %}
 
