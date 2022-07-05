@@ -4,24 +4,29 @@
 
 <div x-data="loginPage" x-init="initAll">
     <h1 x-show="isVisible">login page</h1>
+    <p class="hello">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur temporibus inventore
+        earum reiciendis
+        aperiam atque odio sed numquam assumenda id est nemo, architecto soluta omnis voluptatum dicta? Quia, iusto.</p>
+
+    <h3>hello</h3>
 
 
-
-    <script>
-        const loginPage = {
-            isVisible: false,
-            initAll() {
-                console.log("from login.js file");
-                const thisClass = this;
-                setTimeout(() => {
-                    thisClass.isVisible = true;
-                    console.log("content visible");
-                }, 2000);
-            },
-        }
-    </script>
 </div>
-
-
-
 {% endblock %}
+
+
+{% block custom_js %}
+<script>
+    const loginPage = {
+        isVisible: false,
+        initAll() {
+            console.log("from login.js file");
+            const thisClass = this;
+            setTimeout(() => {
+                thisClass.isVisible = true;
+                console.log("content visible");
+            }, 2000);
+        },
+    }
+</script>
+{% endblock custom_js %}

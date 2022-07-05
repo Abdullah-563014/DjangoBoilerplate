@@ -12,7 +12,7 @@
         <meta property="og:locale" content="en_US" />
         <meta http-equiv="content-language" content="en" />
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-        <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon" />
+        <link rel="shortcut icon" href="{% static 'images/' %}{{favicon}}" type="image/x-icon" />
         <!-- SEO meta data -->
         <meta name="description" content="{{description}}" />
         <meta name="keywords" content="{{keywords}}" />
@@ -43,41 +43,19 @@
 
 
         <!-- script files -->
-        <!-- bootstrap5 min css-->
         <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
         <script src="{% static 'js/vendor/jquery.ui.js' %}"></script>
         <script src="{% static 'js/vendor/popper.min.js' %}"></script>
         <script src="{% static 'js/vendor/jquery.simple.timer.js' %}"></script>
-        <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
         <script src="{% static 'js/main.js' %}"></script>
 
 
-        <script src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js" defer></script>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
-        <!-- bootstrap5 min css-->
-        <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}" />
-        <!-- fontawesome CSS -->
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/all.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/all.min.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/brands.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/brands.min.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/fontawesome.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/fontawesome.min.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/regular.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/regular.min.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/solid.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/solid.min.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/svg-with-js.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/svg-with-js.min.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/v4-shims.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-free/css/v4-shims.min.css' %}" />
+
         <!-- default css -->
-        <link rel="stylesheet" href="{% static 'css/vendor/default.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/color.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/style.min.css' %}" />
 
 
         <!-- custom css -->
@@ -97,7 +75,7 @@
         <script>
             const app = {
                 initAll() {
-                    console.log("from app.js file");
+
                 },
             }
         </script>
@@ -105,7 +83,7 @@
         <!-- custom js -->
         {% block custom_js %}{% endblock custom_js %}
 
-        
+
     </body>
 
 </html>

@@ -35,6 +35,7 @@ def index(request):
     data['keywords'] = SITE_KEYWORDS
     data['image'] = SITE_LOGO
     data['imageType'] = 'image/png'
+    data['favicon'] = SITE_FAVICON
     data['logo'] = SITE_LOGO
     data['favicon'] = SITE_FAVICON
     data['url'] = SITE_URL
